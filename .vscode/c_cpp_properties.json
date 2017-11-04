@@ -5,8 +5,7 @@
             "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceRoot}",
-                "${workspaceRoot}/firmware",
-                "${workspaceRoot}/firmware/usbdrv",
+                "${workspaceRoot}/usbdrv",
                 "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include",
                 "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include-fixed",
                 "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/../../../avr/include"
@@ -17,8 +16,7 @@
             "browse": {
                 "path": [
                     "${workspaceRoot}",
-                    "${workspaceRoot}/firmware",
-                    "${workspaceRoot}/firmware/usbdrv",
+                    "${workspaceRoot}/usbdrv",
                     "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include",
                     "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include-fixed",
                     "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/../../../avr/include"
