@@ -1,0 +1,13 @@
+{
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
+    "files.associations": {
+        "*.vstemplate": "xml",
+        "pgmspace.h": "c",
+        "usbdrv.h": "c",
+        "io.h": "c"
+    },
+    "spellright.language": "en"
+}

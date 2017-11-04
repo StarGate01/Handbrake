@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "WSL",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${workspaceRoot}",
+                "${workspaceRoot}/firmware",
+                "${workspaceRoot}/firmware/usbdrv",
+                "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include",
+                "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include-fixed",
+                "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/../../../avr/include"
+            ],
+            "defines": [
+                "__AVR_ATtiny85__"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/firmware",
+                    "${workspaceRoot}/firmware/usbdrv",
+                    "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include",
+                    "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/include-fixed",
+                    "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/../../../avr/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 3
+}
