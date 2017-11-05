@@ -5,9 +5,12 @@
     ],
     "files.associations": {
         "*.vstemplate": "xml",
+        "SConstruct": "python",
+        "SConscript": "python",
         "pgmspace.h": "c",
         "usbdrv.h": "c",
-        "io.h": "c"
+        "io.h": "c",
+        "eeprom.h": "c"
     },
     "spellright.language": "en"
 }

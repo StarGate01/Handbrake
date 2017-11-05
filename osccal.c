@@ -1,14 +1,15 @@
-/* Name: osccal.c
- * Author: Christian Starkjohann
- * Creation Date: 2008-04-10
- * Tabsize: 4
- * Copyright: (c) 2008 by OBJECTIVE DEVELOPMENT Software GmbH
- * License: GNU GPL v2 (see License.txt) or proprietary (CommercialLicense.txt)
- * This Revision: $Id: osccal.c 553 2008-04-17 19:00:20Z cs $
- */
+/*
+    Name: osccal.c
+    Author: Christian Starkjohann
+    Creation Date: 2008-04-10
+    Tabsize: 4
+    Copyright: (c) 2008 by OBJECTIVE DEVELOPMENT Software GmbH
+    License: GNU GPL v2 (see License.txt) or proprietary (CommercialLicense.txt)
+    This Revision: $Id: osccal.c 553 2008-04-17 19:00:20Z cs $
+*/
 
 #include <avr/io.h>
-#include <avr/pgmspace.h> /* required by usbdrv.h */
+#include <avr/pgmspace.h> // required by usbdrv.h
 #include "usbdrv.h"
 
 /*
@@ -39,20 +40,17 @@ void calibrateOscillator(void)
     uchar step = 128;
     uchar trialValue = 0, optimumValue;
     int x, optimumDev, targetValue = (unsigned)(1499 * (double)F_CPU / 10.5e6 + 0.5);
-
-    /* do a binary search: */
-    do
+    do // do a binary search
     {
         OSCCAL = trialValue + step;
-        x = usbMeasureFrameLength(); /* proportional to current real frequency */
-        if (x < targetValue)         /* frequency still too low */
-            trialValue += step;
+        x = usbMeasureFrameLength(); // proportional to current real frequency
+        if (x < targetValue)  trialValue += step; // frequency still too low
         step >>= 1;
     } while (step > 0);
-    /* We have a precision of +/- 1 for optimum OSCCAL here */
-    /* now do a neighborhood search for optimum value */
+    // We have a precision of +/- 1 for optimum OSCCAL here
+    // now do a neighborhood search for optimum value
     optimumValue = trialValue;
-    optimumDev = x; /* this is certainly far away from optimum */
+    optimumDev = x; // this is certainly far away from optimum
     for (OSCCAL = trialValue - 1; OSCCAL <= trialValue + 1; OSCCAL++)
     {
         x = usbMeasureFrameLength() - targetValue;
