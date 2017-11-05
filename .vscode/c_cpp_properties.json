@@ -11,7 +11,8 @@
                 "C:/lxss_ro/rootfs/usr/lib/gcc/avr/4.9.2/../../../avr/include"
             ],
             "defines": [
-                "__AVR_ATtiny85__"
+                "__AVR_ATtiny85__",
+                "F_CPU"
             ],
             "browse": {
                 "path": [
