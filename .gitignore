@@ -1,3 +1,5 @@
 *.o
 *.hex
 *.bin
+*.bak
+*.lib
