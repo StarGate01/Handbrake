@@ -17,6 +17,7 @@
 /*
     PB3 = analog input (ADC3)
     PB0, PB2 = USB data lines
+    PB4 = LED
 */
 
 static uchar reportBuffer[3]; //buffer for HID reports
@@ -108,9 +109,11 @@ int main(void)
     uchar i;
     for (i = 0; i < 20; i++) _delay_ms(15); // 300 ms disconnect
     usbDeviceConnect();
+    DDRB |= 1 << PB4;
     adcInit();
     usbInit();
     sei();
+    PORTB |= 1 << PB4;
     for (;;)
     { 
         adcPoll();
